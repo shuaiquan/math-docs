@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "target": "ES6",
+        "module": "CommonJS",
+        "noEmit": false,
+        "lib": [
+            "ESNext",
+        ]
+    },
+    "include": [
+        "../math/src/**/*",
+    ]
+}
