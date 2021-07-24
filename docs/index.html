@@ -2708,10 +2708,16 @@ img {
 			<a href="enums/lineside.html" class="tsd-kind-icon">Line<wbr>Side</a>
 		</li>
 		<li class=" tsd-kind-class">
+			<a href="classes/arc.html" class="tsd-kind-icon">Arc</a>
+		</li>
+		<li class=" tsd-kind-class">
 			<a href="classes/box2.html" class="tsd-kind-icon">Box2</a>
 		</li>
 		<li class=" tsd-kind-class">
 			<a href="classes/box3.html" class="tsd-kind-icon">Box3</a>
+		</li>
+		<li class=" tsd-kind-class">
+			<a href="classes/circle.html" class="tsd-kind-icon">Circle</a>
 		</li>
 		<li class=" tsd-kind-class">
 			<a href="classes/line2.html" class="tsd-kind-icon">Line2</a>
@@ -2748,6 +2754,112 @@ img {
 			<a href="#math" id="math" style="color: inherit; text-decoration: none;">
 				<h1>Math</h1>
 			</a>
+			<p>在当下前端(Web)图形化，可视化应用在不断涌现的背景下，开发者在这样的项目中不可避免的需要使用很多基本的几何运算，例如向量运算，矩阵运算等。甚至如果开发者可以抽象数学模型，那么无论是什么样的场景，相信 <code>@s7n/math</code> 都可以帮助到你。</p>
+			<p><a href="https://www.npmjs.com/package/@s7n/math"><img src="https://img.shields.io/npm/v/@s7n/math.svg?style=flat" alt="npm version"></a>
+				<a href="https://www.npmjs.com/package/@s7n/math"><img src="https://img.shields.io/npm/dm/@s7n/math.svg?style=flat" alt="npm downloads"></a>
+			<a href="https://www.npmjs.com/package/@s7n/math"><img src="https://img.shields.io/bundlephobia/minzip/@s7n/math?style=flat" alt="install size"></a></p>
+			<p>这是一个使用 TS 编写的基础数学库，其内容大致包含：</p>
+			<table>
+				<thead>
+					<tr>
+						<th>Class</th>
+						<th>说明</th>
+					</tr>
+				</thead>
+				<tbody><tr>
+						<td>Vector2</td>
+						<td>表示二维的一个向量</td>
+					</tr>
+					<tr>
+						<td>Vector3</td>
+						<td>表示三维的一个向量</td>
+					</tr>
+					<tr>
+						<td>Matrix3</td>
+						<td>表示一个 3 x 3 的矩阵</td>
+					</tr>
+					<tr>
+						<td>Matrix4</td>
+						<td>表示一个 4 x 4 的矩阵</td>
+					</tr>
+					<tr>
+						<td>Line2</td>
+						<td>表示二维世界的一条线</td>
+					</tr>
+					<tr>
+						<td>Line3</td>
+						<td>表示三维世界的一条线</td>
+					</tr>
+					<tr>
+						<td>Box2</td>
+						<td>表示一个二维世界中的 AABB 盒子</td>
+					</tr>
+					<tr>
+						<td>Box3</td>
+						<td>表示一个三维世界中的 AABB 盒子</td>
+					</tr>
+					<tr>
+						<td>Circle</td>
+						<td>表示二维世界中的一个圆</td>
+					</tr>
+					<tr>
+						<td>Arc</td>
+						<td>表示二维世界中的圆弧</td>
+					</tr>
+			</tbody></table>
+			<p>详细用法请参考：<a href="https://shuaiquan.github.io/math-docs/index.html">API文档</a></p>
+			<a href="#使用" id="使用" style="color: inherit; text-decoration: none;">
+				<h2>使用</h2>
+			</a>
+			<pre><code><span style="color: #001080">npm</span><span style="color: #000000"> </span><span style="color: #001080">i</span><span style="color: #000000"> @</span><span style="color: #001080">s7n</span><span style="color: #000000">/</span><span style="color: #001080">math</span><span style="color: #000000"> -</span><span style="color: #0070C1">S</span>
+</code></pre>
+			<a href="#案例" id="案例" style="color: inherit; text-decoration: none;">
+				<h3>案例</h3>
+			</a>
+			<pre><code><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">Vector2</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;@s7n/math&#039;</span><span style="color: #000000">;</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">v1</span><span style="color: #000000"> = </span><span style="color: #795E26">Vector2</span><span style="color: #000000">(</span><span style="color: #098658">10</span><span style="color: #000000">, </span><span style="color: #098658">5</span><span style="color: #000000">);</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">v2</span><span style="color: #000000"> = </span><span style="color: #795E26">Vector2</span><span style="color: #000000">(</span><span style="color: #098658">2</span><span style="color: #000000">, </span><span style="color: #098658">2</span><span style="color: #000000">);</span>
+
+<span style="color: #008000">// 向量相乘</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">v3</span><span style="color: #000000"> = </span><span style="color: #001080">v1</span><span style="color: #000000">.</span><span style="color: #795E26">multiply</span><span style="color: #000000">(</span><span style="color: #001080">v2</span><span style="color: #000000">);</span>
+
+<span style="color: #008000">// 求两个向量的点积</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">dotProduct</span><span style="color: #000000"> = </span><span style="color: #001080">v1</span><span style="color: #000000">.</span><span style="color: #795E26">dot</span><span style="color: #000000">(</span><span style="color: #001080">v2</span><span style="color: #000000">);</span>
+</code></pre>
+			<p>已提供接口可参考API文档</p>
+			<a href="#api-文档" id="api-文档" style="color: inherit; text-decoration: none;">
+				<h2>API 文档</h2>
+			</a>
+			<p>文档地址：<a href="https://shuaiquan.github.io/math-docs/index.html">Docs</a></p>
+			<a href="#设计理念" id="设计理念" style="color: inherit; text-decoration: none;">
+				<h2>设计理念</h2>
+			</a>
+			<p>本项目在接口的设计上对 <code>three/math</code> 有诸多的参考，但是有一点很不一样，需要格外提醒大家：</p>
+			<p><code>所有运算接口得到的都是一个的引用，原有对象的值不会被修改</code>。</p>
+			<a href="#举个例子" id="举个例子" style="color: inherit; text-decoration: none;">
+				<h3>举个例子</h3>
+			</a>
+			<pre><code class="language-js"><span style="color: #008000">// 有一个向量 v1 , 其坐标为 (5, 10)</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">v1</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">Vector2</span><span style="color: #000000">(</span><span style="color: #098658">5</span><span style="color: #000000">, </span><span style="color: #098658">10</span><span style="color: #000000">);</span>
+
+<span style="color: #008000">// 将 v1 的坐标变为原来的两倍</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">v2</span><span style="color: #000000"> = </span><span style="color: #001080">v1</span><span style="color: #000000">.</span><span style="color: #795E26">multiply</span><span style="color: #000000">(</span><span style="color: #098658">2</span><span style="color: #000000">);</span>
+
+<span style="color: #008000">// 此时，v2 为（10, 20）, v1 为 (5, 10) 且 v1 !== v2</span>
+<span style="color: #008000">// 这里的 multiply 运算不会更改对象 v1 本身的值</span>
+
+<span style="color: #008000">// 但是例如使用 set 来更新值，则会改变原有的值</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">v3</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">Vector2</span><span style="color: #000000">(</span><span style="color: #098658">5</span><span style="color: #000000">, </span><span style="color: #098658">10</span><span style="color: #000000">);</span>
+<span style="color: #001080">v3</span><span style="color: #000000">.</span><span style="color: #795E26">set</span><span style="color: #000000">(</span><span style="color: #098658">1</span><span style="color: #000000">, </span><span style="color: #098658">2</span><span style="color: #000000">);</span>
+
+<span style="color: #008000">// 此时 v3 已经变为 (1, 2)</span>
+</code></pre>
+			<p>总结来讲， <code>set...</code>, <code>from...</code> 等接口都会改变原有对象的值，而例如 <code>multiply</code>, <code>add</code>, <code>apply...</code> 等接口都会返回新值，而不改变原有对象的值</p>
+			<a href="#写在最后" id="写在最后" style="color: inherit; text-decoration: none;">
+				<h2>写在最后</h2>
+			</a>
+			<p>也许你也正在尝试做一些图形化的前端应用，也许在你起步的时候也像我曾经遇到这些 <code>Math</code> 的麻烦，那么我希望 <code>@s7n/math</code> 可以在这个时候帮到你，可以帮你走到下个阶段，</p>
 		</div>
 		<div style="position:relative;"><a name="typedoc-main-index" class="tsd-anchor"></a></div>
 		<section class="tsd-panel-group tsd-index-group">
@@ -2763,8 +2875,10 @@ img {
 					<section class="tsd-index-section ">
 						<h3>Classes</h3>
 						<ul class="tsd-index-list">
+							<li class="tsd-kind-class"><a href="classes/arc.html" class="tsd-kind-icon">Arc</a></li>
 							<li class="tsd-kind-class"><a href="classes/box2.html" class="tsd-kind-icon">Box2</a></li>
 							<li class="tsd-kind-class"><a href="classes/box3.html" class="tsd-kind-icon">Box3</a></li>
+							<li class="tsd-kind-class"><a href="classes/circle.html" class="tsd-kind-icon">Circle</a></li>
 							<li class="tsd-kind-class"><a href="classes/line2.html" class="tsd-kind-icon">Line2</a></li>
 							<li class="tsd-kind-class"><a href="classes/line3.html" class="tsd-kind-icon">Line3</a></li>
 							<li class="tsd-kind-class"><a href="classes/matrix3.html" class="tsd-kind-icon">Matrix3</a></li>
@@ -2794,15 +2908,18 @@ img {
 			<section class="tsd-panel tsd-member tsd-kind-variable">
 				<a name="utils" class="tsd-anchor"></a>
 				<h3><span class="tsd-flag ts-flagConst">Const</span> Utils</h3>
-				<div class="tsd-signature tsd-kind-icon">Utils<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>Line2<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">typeof </span><span class="tsd-signature-type">Line2Util</span><span class="tsd-signature-symbol">; </span>Line3<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">typeof </span><span class="tsd-signature-type">Line3Util</span><span class="tsd-signature-symbol">; </span>Vector2<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">typeof </span><span class="tsd-signature-type">Vector2Util</span><span class="tsd-signature-symbol">; </span>Vector3<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">typeof </span><span class="tsd-signature-type">Vector3Util</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> = ...</span></div>
+				<div class="tsd-signature tsd-kind-icon">Utils<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>Circle<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">typeof </span><span class="tsd-signature-type">CircleUtil</span><span class="tsd-signature-symbol">; </span>Line2<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">typeof </span><span class="tsd-signature-type">Line2Util</span><span class="tsd-signature-symbol">; </span>Line3<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">typeof </span><span class="tsd-signature-type">Line3Util</span><span class="tsd-signature-symbol">; </span>Vector2<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">typeof </span><span class="tsd-signature-type">Vector2Util</span><span class="tsd-signature-symbol">; </span>Vector3<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">typeof </span><span class="tsd-signature-type">Vector3Util</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> = ...</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/shuaiquan/mathematic/blob/618edb7/packages/math/src/utils/index.ts#L6">utils/index.ts:6</a></li>
+						<li>Defined in <a href="https://github.com/shuaiquan/mathematic/blob/6103d36/packages/math/src/utils/index.ts#L7">utils/index.ts:7</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
 					<h4>Type declaration</h4>
 					<ul class="tsd-parameters">
+						<li class="tsd-parameter">
+							<h5>Circle<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">typeof </span><span class="tsd-signature-type">CircleUtil</span></h5>
+						</li>
 						<li class="tsd-parameter">
 							<h5>Line2<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">typeof </span><span class="tsd-signature-type">Line2Util</span></h5>
 						</li>
